@@ -15,7 +15,7 @@ def load_css(file_name):
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-load_css("styles/main.css")
+load_css("styles.css")
 
 
 st.markdown('<div class="app-shell">', unsafe_allow_html=True)
