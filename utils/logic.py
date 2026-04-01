@@ -1,5 +1,6 @@
 from datetime import timedelta
 
+
 def get_teaching_dates(start_date, end_date, selected_days):
     teaching_dates = []
     current = start_date
