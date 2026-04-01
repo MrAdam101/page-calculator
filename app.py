@@ -1,6 +1,12 @@
 import streamlit as st
 from datetime import date, timedelta
 
+def load_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+load_css("styles.css")
+
 st.set_page_config(page_title="Book Catch-Up Calculator", page_icon="📘", layout="centered")
 
 st.title("📘 Book page Calculator")
