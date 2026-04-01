@@ -3,8 +3,8 @@ from datetime import date, timedelta
 
 st.set_page_config(page_title="Book Catch-Up Calculator", page_icon="📘", layout="centered")
 
-st.title("📘 Book Catch-Up Calculator")
-st.write("Enter your current page and let the app calculate how many pages you need per lesson.")
+st.title("📘 Book page Calculator")
+st.write("Enter your current page and let the app calculate how many pages you need per lesson to get the book done on time.")
 
 # -----------------------------
 # Helper functions
