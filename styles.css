@@ -167,52 +167,68 @@ div[data-baseweb="input"] {
 .stDateInput div[data-baseweb="input"] {
     background: #ffffff !important;
 }
+/* ===== CLEAN MULTISELECT ===== */
 
-/* Multiselect full container */
-.stMultiSelect div[data-baseweb="select"] {
+/* Outer multiselect box */
+.stMultiSelect [data-baseweb="select"] {
     background: #ffffff !important;
-    border: 1px solid var(--border-strong) !important;
+    border: 1px solid #d7dee8 !important;
     border-radius: 16px !important;
     min-height: 58px !important;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.95);
+    box-shadow: none !important;
 }
 
-/* Combobox area inside multiselect */
-.stMultiSelect div[role="combobox"] {
+/* Closed control area */
+.stMultiSelect [data-baseweb="select"] > div {
     background: #ffffff !important;
-    color: var(--text) !important;
+    color: #0f172a !important;
+    border-radius: 16px !important;
 }
 
-/* Selected values row */
-.stMultiSelect div[data-baseweb="tag"] {
-    background: #eff6ff !important;
-    color: #1d4ed8 !important;
-    border: 1px solid #bfdbfe !important;
-    border-radius: 999px !important;
-    font-weight: 700 !important;
+/* Placeholder text */
+.stMultiSelect [data-baseweb="select"] input::placeholder {
+    color: #64748b !important;
+}
+
+/* Input text */
+.stMultiSelect input {
+    background: #ffffff !important;
+    color: #0f172a !important;
 }
 
 /* Selected tags */
-.stMultiSelect div[data-baseweb="tag"] {
-    background: #eff6ff !important;
-    color: #1d4ed8 !important;
-    border: 1px solid #bfdbfe !important;
+.stMultiSelect [data-baseweb="tag"] {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #d7dee8 !important;
     border-radius: 999px !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
+    box-shadow: none !important;
 }
 
-/* 🔥 PASTE HERE ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+/* Tag text */
+.stMultiSelect [data-baseweb="tag"] span {
+    color: #0f172a !important;
+}
+
+/* Tag remove icon */
+.stMultiSelect [data-baseweb="tag"] svg {
+    fill: #64748b !important;
+    color: #64748b !important;
+}
 
 /* Dropdown popup */
 div[data-baseweb="popover"] {
     background: #ffffff !important;
-    border-radius: 16px !important;
     border: 1px solid #e2e8f0 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08) !important;
 }
 
 /* Dropdown list */
 ul[role="listbox"] {
     background: #ffffff !important;
+    border-radius: 16px !important;
 }
 
 /* Dropdown options */
@@ -221,35 +237,19 @@ li[role="option"] {
     color: #0f172a !important;
 }
 
-/* Hover */
+/* Hovered option */
 li[role="option"]:hover {
-    background: #eff6ff !important;
-    color: #1d4ed8 !important;
+    background: #f8fafc !important;
+    color: #0f172a !important;
 }
 
-/* Selected option */
+/* Selected option in dropdown */
 li[aria-selected="true"] {
-    background: #dbeafe !important;
-    color: #1d4ed8 !important;
-}
-
-/* 🔥 FIX CLOSED MULTISELECT (the dark bar you showed) */
-
-.stMultiSelect div[data-baseweb="select"] > div {
-    background: #ffffff !important;
+    background: #eff6ff !important;
     color: #0f172a !important;
 }
 
-/* Inner value container */
-.stMultiSelect div[data-baseweb="select"] div {
-    background: #ffffff !important;
-    color: #0f172a !important;
-}
 
-/* Placeholder text (Choose options) */
-.stMultiSelect span {
-    color: #64748b !important;
-}
 
 /* 🔥 CLEAN WHITE TAGS */
 
