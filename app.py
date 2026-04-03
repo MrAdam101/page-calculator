@@ -53,8 +53,7 @@ if not check_password():
     st.stop()
 
 # ---------- YOUR APP STARTS BELOW ----------
-st.title("Book Page Calculator")
-st.write("App unlocked.")
+
 
 
 def load_css(file_name):
