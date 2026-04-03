@@ -251,6 +251,31 @@ li[aria-selected="true"] {
     color: #64748b !important;
 }
 
+/* 🔥 CLEAN WHITE TAGS */
+
+.stMultiSelect div[data-baseweb="tag"] {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #d7dee8 !important;
+    border-radius: 999px !important;
+    font-weight: 600 !important;
+}
+
+/* Text inside tag */
+.stMultiSelect div[data-baseweb="tag"] span {
+    color: #0f172a !important;
+}
+
+/* X (remove button) */
+.stMultiSelect div[data-baseweb="tag"] svg {
+    color: #64748b !important;
+}
+
+/* Hover effect */
+.stMultiSelect div[data-baseweb="tag"]:hover {
+    background: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+}
 /* 🔥 KEEP THIS BELOW */
  
 /* Buttons inside number inputs */
