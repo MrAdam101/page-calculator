@@ -192,7 +192,51 @@ div[data-baseweb="input"] {
     font-weight: 700 !important;
 }
 
+/* Selected tags */
+.stMultiSelect div[data-baseweb="tag"] {
+    background: #eff6ff !important;
+    color: #1d4ed8 !important;
+    border: 1px solid #bfdbfe !important;
+    border-radius: 999px !important;
+    font-weight: 700 !important;
+}
+
+/* 🔥 PASTE HERE ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */
+
+/* Dropdown popup */
+div[data-baseweb="popover"] {
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+/* Dropdown list */
+ul[role="listbox"] {
+    background: #ffffff !important;
+}
+
+/* Dropdown options */
+li[role="option"] {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+/* Hover */
+li[role="option"]:hover {
+    background: #eff6ff !important;
+    color: #1d4ed8 !important;
+}
+
+/* Selected option */
+li[aria-selected="true"] {
+    background: #dbeafe !important;
+    color: #1d4ed8 !important;
+}
+
+/* 🔥 KEEP THIS BELOW */
+ 
 /* Buttons inside number inputs */
+
 .stNumberInput button {
     background: #ffffff !important;
     color: #0f172a !important;
