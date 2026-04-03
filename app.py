@@ -9,6 +9,53 @@ st.set_page_config(
     layout="wide"
 )
 
+import streamlit as st
+import hmac
+
+st.set_page_config(
+    page_title="Book Page Calculator",
+    page_icon="📘",
+    layout="wide"
+)
+
+# ---------- PASSWORD PROTECTION ----------
+def check_password():
+    def password_entered():
+        correct_password = st.secrets.get("APP_PASSWORD", "Win1")
+
+        if hmac.compare_digest(
+            st.session_state.get("password", ""),
+            correct_password
+        ):
+            st.session_state["password_correct"] = True
+            del st.session_state["password"]
+        else:
+            st.session_state["password_correct"] = False
+
+    if st.session_state.get("password_correct", False):
+        return True
+
+    st.markdown("## Login Required")
+    st.text_input(
+        "Enter password",
+        type="password",
+        key="password",
+        on_change=password_entered
+    )
+
+    if "password_correct" in st.session_state and not st.session_state["password_correct"]:
+        st.error("Incorrect password")
+
+    return False
+
+
+if not check_password():
+    st.stop()
+
+# ---------- YOUR APP STARTS BELOW ----------
+st.title("Book Page Calculator")
+st.write("App unlocked.")
+
 
 def load_css(file_name):
     with open(file_name, encoding="utf-8") as f:
