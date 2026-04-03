@@ -233,6 +233,24 @@ li[aria-selected="true"] {
     color: #1d4ed8 !important;
 }
 
+/* 🔥 FIX CLOSED MULTISELECT (the dark bar you showed) */
+
+.stMultiSelect div[data-baseweb="select"] > div {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+/* Inner value container */
+.stMultiSelect div[data-baseweb="select"] div {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+/* Placeholder text (Choose options) */
+.stMultiSelect span {
+    color: #64748b !important;
+}
+
 /* 🔥 KEEP THIS BELOW */
  
 /* Buttons inside number inputs */
