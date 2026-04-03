@@ -10,14 +10,9 @@
     --border-strong: #d7dee8;
     --primary: #2563eb;
     --primary-dark: #1d4ed8;
-    --primary-soft: #dbeafe;
     --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.08);
     --shadow-md: 0 10px 25px rgba(15, 23, 42, 0.06);
     --shadow-sm: 0 6px 14px rgba(15, 23, 42, 0.04);
-    --radius-xl: 28px;
-    --radius-lg: 24px;
-    --radius-md: 18px;
-    --radius-sm: 16px;
 }
 
 html, body, [class*="css"] {
@@ -36,31 +31,32 @@ body {
     color: var(--text);
 }
 
-/* Hide default Streamlit chrome */
+/* Hide Streamlit default chrome */
 header {
     visibility: hidden;
     height: 0;
 }
 
-#MainMenu, footer {
+#MainMenu,
+footer {
     visibility: hidden;
 }
 
-/* Main page spacing */
+/* Main spacing */
 .block-container {
     max-width: 1080px;
-    padding-top: 1.5rem !important;
+    padding-top: 1.2rem !important;
     padding-bottom: 3rem !important;
 }
 
-/* Outer app shell */
+/* App shell */
 .app-shell {
-    background: rgba(255, 255, 255, 0.78);
+    background: rgba(255, 255, 255, 0.82);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(226, 232, 240, 0.9);
     box-shadow: var(--shadow-lg);
     border-radius: 30px;
-    padding: 3rem 3rem;
+    padding: 3rem;
 }
 
 /* Hero */
@@ -102,7 +98,7 @@ header {
     line-height: 1.75;
 }
 
-/* Section card */
+/* Cards */
 .section-card {
     background: #ffffff;
     border: 1px solid var(--border);
@@ -133,7 +129,18 @@ label {
     font-size: 0.95rem !important;
 }
 
-/* Make all input areas white */
+/* ---------- FORCE ALL BOXES WHITE ---------- */
+
+/* Outer wrappers */
+.stTextInput > div,
+.stNumberInput > div,
+.stDateInput > div,
+.stMultiSelect > div {
+    background: #ffffff !important;
+    border-radius: 16px !important;
+}
+
+/* Actual text/date/number inputs */
 .stTextInput input,
 .stNumberInput input,
 .stDateInput input {
@@ -146,23 +153,49 @@ label {
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.95) !important;
 }
 
-/* Focus */
-.stTextInput input:focus,
-.stNumberInput input:focus,
-.stDateInput input:focus {
-    border-color: #93c5fd !important;
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.10) !important;
-}
-
-/* Number input wrapper */
-.stNumberInput > div {
+/* Baseweb input wrapper for number/date/text */
+div[data-baseweb="input"] {
     background: #ffffff !important;
     border-radius: 16px !important;
 }
 
-/* Number stepper buttons */
+/* Number input full container */
+.stNumberInput div[data-baseweb="input"] {
+    background: #ffffff !important;
+}
+
+/* Date input full container */
+.stDateInput div[data-baseweb="input"] {
+    background: #ffffff !important;
+}
+
+/* Multiselect full container */
+.stMultiSelect div[data-baseweb="select"] {
+    background: #ffffff !important;
+    border: 1px solid var(--border-strong) !important;
+    border-radius: 16px !important;
+    min-height: 58px !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.95);
+}
+
+/* Combobox area inside multiselect */
+.stMultiSelect div[role="combobox"] {
+    background: #ffffff !important;
+    color: var(--text) !important;
+}
+
+/* Selected values row */
+.stMultiSelect div[data-baseweb="tag"] {
+    background: #eff6ff !important;
+    color: #1d4ed8 !important;
+    border: 1px solid #bfdbfe !important;
+    border-radius: 999px !important;
+    font-weight: 700 !important;
+}
+
+/* Buttons inside number inputs */
 .stNumberInput button {
-    background: #f8fafc !important;
+    background: #ffffff !important;
     color: #0f172a !important;
     border: 1px solid #e2e8f0 !important;
     border-radius: 10px !important;
@@ -174,38 +207,21 @@ label {
     color: #1d4ed8 !important;
 }
 
-/* Date input wrapper */
-.stDateInput > div {
-    background: #ffffff !important;
-    border-radius: 16px !important;
-}
-
-/* Multiselect white background */
-.stMultiSelect div[data-baseweb="select"] {
-    background: #ffffff !important;
-    border: 1px solid var(--border-strong) !important;
-    border-radius: 16px !important;
-    min-height: 58px !important;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.95);
-}
-
+/* Focus states */
+.stTextInput input:focus,
+.stNumberInput input:focus,
+.stDateInput input:focus,
 .stMultiSelect div[data-baseweb="select"]:focus-within {
     border-color: #93c5fd !important;
     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.10) !important;
 }
 
-/* Tags */
-.stMultiSelect span[data-baseweb="tag"] {
-    background: #eff6ff !important;
-    color: #1d4ed8 !important;
-    border: 1px solid #bfdbfe !important;
-    border-radius: 999px !important;
-    font-weight: 700 !important;
-    padding-left: 0.45rem !important;
-    padding-right: 0.45rem !important;
+/* Remove stray dark backgrounds */
+div[data-testid="stHorizontalBlock"] > div {
+    background: transparent !important;
 }
 
-/* Main button */
+/* Button */
 .stButton > button {
     width: 100%;
     height: 58px;
@@ -229,7 +245,7 @@ label {
     transform: translateY(0);
 }
 
-/* KPI grid */
+/* KPI cards */
 .kpi-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -267,7 +283,7 @@ label {
     line-height: 1.45;
 }
 
-/* Summary info */
+/* Summary */
 .summary-wrap {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -279,7 +295,7 @@ label {
     background: var(--panel-2);
     border: 1px solid var(--border);
     border-radius: 16px;
-    padding: 1rem 1rem;
+    padding: 1rem;
 }
 
 .summary-label {
@@ -296,7 +312,7 @@ label {
     line-height: 1.5;
 }
 
-/* Lesson plan cards */
+/* Lesson cards */
 .plan-list {
     margin-top: 0.6rem;
 }
@@ -305,7 +321,7 @@ label {
     background: #ffffff;
     border: 1px solid var(--border);
     border-radius: 18px;
-    padding: 1rem 1rem;
+    padding: 1rem;
     box-shadow: var(--shadow-sm);
     margin-bottom: 0.85rem;
     display: flex;
@@ -340,12 +356,6 @@ label {
     font-size: 0.86rem;
     font-weight: 700;
     white-space: nowrap;
-}
-
-/* Bonus polish */
-hr {
-    border: none;
-    border-top: 1px solid #e5e7eb;
 }
 
 /* Responsive */
