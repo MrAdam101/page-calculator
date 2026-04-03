@@ -294,12 +294,31 @@ li[aria-selected="true"] {
 }
 
 /* Focus states */
+/* 🔥 FIX RED BORDER ISSUE (force blue focus only) */
+
 .stTextInput input:focus,
 .stNumberInput input:focus,
 .stDateInput input:focus,
 .stMultiSelect div[data-baseweb="select"]:focus-within {
+    border: 1px solid #93c5fd !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15) !important;
+    outline: none !important;
+}
+
+/* 🚫 REMOVE ERROR RED STYLES COMPLETELY */
+[data-baseweb="select"] {
+    border-color: #d7dee8 !important;
+}
+
+[data-baseweb="select"]:focus,
+[data-baseweb="select"]:focus-within {
     border-color: #93c5fd !important;
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.10) !important;
+}
+
+/* Kill any red validation styles */
+[aria-invalid="true"] {
+    border-color: #d7dee8 !important;
+    box-shadow: none !important;
 }
 
 /* Remove stray dark backgrounds */
