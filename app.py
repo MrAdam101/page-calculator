@@ -107,7 +107,7 @@ selected_days = st.multiselect(
     default=["Monday", "Wednesday", "Friday"],
 )
 
-calculate = st.button("Generate Catch-Up Plan")
+calculate = st.button("Generate Plan")
 
 st.markdown("</div>", unsafe_allow_html=True)
 
