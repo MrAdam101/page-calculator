@@ -485,7 +485,7 @@ div[data-testid="stHorizontalBlock"] > div {
     border: 1px solid #0f172a !important;
     border-radius: 16px !important;
     min-height: 50px !important;
-    padding: 0 10px !important;
+    padding: 0 5px !important;
     box-sizing: border-box !important;
     overflow: hidden !important;
 }
