@@ -1,14 +1,13 @@
 import streamlit as st
 from datetime import date, timedelta
 from utils.logic import get_teaching_dates, split_remaining_pages
-
+import hmac
 
 st.set_page_config(
     page_title="Book Page Calculator",
     page_icon="📘",
     layout="wide"
 )
-
 
 # ---------- PASSWORD PROTECTION ----------
 def check_password():
