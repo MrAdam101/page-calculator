@@ -472,3 +472,29 @@ div[data-testid="stHorizontalBlock"] > div {
         white-space: normal;
     }
 }
+
+/* ALIGN MULTISELECT BORDER + INNER WHITE AREA */
+.stMultiSelect > div {
+    background: transparent !important;
+    border-radius: 16px !important;
+    padding: 0 !important;
+}
+
+.stMultiSelect [data-baseweb="select"] {
+    background: #ffffff !important;
+    border: 1px solid #0f172a !important;
+    border-radius: 16px !important;
+    min-height: 50px !important;
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+.stMultiSelect [data-baseweb="select"] > div {
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    min-height: 48px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
