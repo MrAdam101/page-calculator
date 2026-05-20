@@ -11,38 +11,33 @@ st.set_page_config(
 
 # ---------- PASSWORD PROTECTION ----------
 def check_password():
-    def password_entered():
-        correct_password = st.secrets.get("APP_PASSWORD", "Win1")
+    correct_password = st.secrets.get("APP_PASSWORD", "Win1")
 
-        if hmac.compare_digest(
-            st.session_state.get("password", ""),
-            correct_password
-        ):
-            st.session_state["password_correct"] = True
-            del st.session_state["password"]
-        else:
-            st.session_state["password_correct"] = False
+    if "password_correct" not in st.session_state:
+        st.session_state["password_correct"] = False
 
-    if st.session_state.get("password_correct", False):
+    if st.session_state["password_correct"]:
         return True
 
     st.markdown("## Login Required")
-    st.text_input(
+
+    password = st.text_input(
         "Enter password",
-        type="password",
-        key="password",
-        on_change=password_entered
+        type="password"
     )
 
-    if "password_correct" in st.session_state and not st.session_state["password_correct"]:
-        st.error("Incorrect password")
+    if st.button("Login"):
+        if hmac.compare_digest(password, correct_password):
+            st.session_state["password_correct"] = True
+            st.rerun()
+        else:
+            st.error("Incorrect password")
 
     return False
 
 
 if not check_password():
     st.stop()
-
 # ---------- YOUR APP STARTS BELOW ----------
 
 
