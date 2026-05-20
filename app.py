@@ -9,14 +9,6 @@ st.set_page_config(
     layout="wide"
 )
 
-import streamlit as st
-import hmac
-
-st.set_page_config(
-    page_title="Book Page Calculator",
-    page_icon="📘",
-    layout="wide"
-)
 
 # ---------- PASSWORD PROTECTION ----------
 def check_password():
