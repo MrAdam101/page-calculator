@@ -72,7 +72,7 @@ st.markdown("""
     <div class="section-subtitle">Enter your current progress and schedule to generate a polished catch-up plan.</div>
 """, unsafe_allow_html=True)
 
-book_name = st.text_input("Book Name", value="Enter book name")
+book_name = st.text_input("Enter book Name ")
 
 col1, col2 = st.columns(2)
 with col1:
