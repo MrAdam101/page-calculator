@@ -226,3 +226,30 @@ div[aria-invalid="true"]:focus-within {
 div[data-testid="stHorizontalBlock"] > div {
     background: transparent !important;
 }
+
+/* FINAL FIX: BLUE GLOW ONLY WHEN CLICKED */
+
+.stTextInput input:focus,
+.stNumberInput input:focus,
+.stDateInput input:focus,
+.stMultiSelect [data-baseweb="select"]:focus-within {
+    border: 2px solid #2563eb !important;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.22) !important;
+    outline: none !important;
+}
+
+/* NORMAL BLACK BORDER WHEN NOT CLICKED */
+.stTextInput input,
+.stNumberInput input,
+.stDateInput input,
+.stMultiSelect [data-baseweb="select"] {
+    border: 2px solid #111827 !important;
+    border-radius: 16px !important;
+}
+
+/* REMOVE RED BORDER */
+[aria-invalid="true"],
+[data-invalid="true"] {
+    border-color: #111827 !important;
+    box-shadow: none !important;
+}
