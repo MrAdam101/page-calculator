@@ -990,11 +990,21 @@ div[data-testid="stHorizontalBlock"] > div {
     overflow: hidden !important;
 }
 
-.stMultiSelect [data-baseweb="select"] > div {
-    background: #ffffff !important;
-    border-radius: 16px !important;
-    min-height: 48px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-sizing: border-box !important;
+/* FIX CURSOR AND TEXT VISIBILITY */
+
+input,
+textarea,
+div[data-baseweb="input"] input,
+.stTextInput input {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    caret-color: #2563eb !important;
+    opacity: 1 !important;
+}
+
+input:focus,
+textarea:focus,
+.stTextInput input:focus {
+    color: #0f172a !important;
+    caret-color: #2563eb !important;
 }
