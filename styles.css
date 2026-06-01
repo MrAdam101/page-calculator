@@ -1072,3 +1072,15 @@ div[data-baseweb="base-input"]:focus-within {
     color: #0f172a !important;
     caret-color: #2563eb !important;
 }
+/* MAKE TEACHING DAYS LEFT MATCH TEXT INPUT FOCUS EFFECT */
+
+.stMultiSelect [data-baseweb="select"]:focus-within {
+    border: 2px solid #2563eb !important;
+    box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.22) !important;
+    border-radius: 18px !important;
+    outline: none !important;
+}
+
+.stMultiSelect [data-baseweb="select"] {
+    border-radius: 18px !important;
+}
