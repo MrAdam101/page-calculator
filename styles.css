@@ -198,7 +198,7 @@ div[aria-invalid="true"]:focus-within {
 
 .stMultiSelect [data-baseweb="select"] {
     background: #ffffff !important;
-    border: 1px solid var(--border-strong) !important;
+    border: 2px solid #374151 !important;
     border-radius: 16px !important;
     min-height: 60px !important;
     padding: 8px 12px !important;
