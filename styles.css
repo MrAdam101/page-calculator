@@ -146,88 +146,101 @@ div[data-baseweb="input"] {
     border-radius: 16px !important;
 }
 
-/* BLUE FOCUS */
-input:focus,
-textarea:focus,
+/****************************************
+INPUTS
+****************************************/
+
+/* Normal state */
+.stTextInput input,
+.stNumberInput input,
+.stDateInput input {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #d7dee8 !important;
+    border-radius: 16px !important;
+    caret-color: #2563eb !important;
+    box-shadow: none !important;
+}
+
+/* Focus state */
 .stTextInput input:focus,
 .stNumberInput input:focus,
-.stDateInput input:focus,
-div[data-baseweb="input"]:focus-within,
-div[data-baseweb="base-input"]:focus-within {
+.stDateInput input:focus {
     border-color: #2563eb !important;
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.20) !important;
+    box-shadow: 0 0 0 4px rgba(37,99,235,.20) !important;
     outline: none !important;
 }
 
-/* REMOVE RED VALIDATION */
+/* Kill red validation */
 [aria-invalid="true"],
-[data-invalid="true"],
-div[aria-invalid="true"],
-input[aria-invalid="true"] {
+[data-invalid="true"] {
     border-color: #d7dee8 !important;
     box-shadow: none !important;
-    outline: none !important;
 }
-/* TEACHING DAYS LEFT MULTISELECT - FINAL */
+
+
+/****************************************
+TEACHING DAYS LEFT
+****************************************/
 
 .stMultiSelect [data-baseweb="select"] {
     background: #ffffff !important;
     border: 1px solid #d7dee8 !important;
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.20) !important;
     border-radius: 16px !important;
-    min-height: 68px !important;
-    padding: 12px 14px !important;
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.20) !important;
-    overflow: visible !important;
+    min-height: 64px !important;
+    padding: 10px 12px !important;
+    box-shadow: none !important;
+}
+
+/* Only blue when active */
+.stMultiSelect [data-baseweb="select"]:focus-within {
+    border: 2px solid #2563eb !important;
+    box-shadow: 0 0 0 4px rgba(37,99,235,.20) !important;
 }
 
 .stMultiSelect [data-baseweb="select"] > div {
-    background: #ffffff !important;
     border: none !important;
     box-shadow: none !important;
-    min-height: 44px !important;
-    display: flex !important;
-    align-items: center !important;
-    overflow: visible !important;
-    padding: 0 !important;
+    background: #ffffff !important;
 }
 
+/* Day tags */
 .stMultiSelect [data-baseweb="tag"] {
     background: #ffffff !important;
-    color: #0f172a !important;
     border: 1px solid #d7dee8 !important;
     border-radius: 10px !important;
-    min-height: 44px !important;
-    height: 42px !important;
-    padding: 0 14px !important;
-    margin: 2px 6px 2px 0 !important;
+
+    height: 38px !important;
+    min-height: 38px !important;
+
+    padding: 0 12px !important;
+    margin-right: 6px !important;
+
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    overflow: visible !important;
-    line-height: normal !important;
+
+    color: #0f172a !important;
     font-weight: 600 !important;
 }
 
+/* Fix Monday clipping */
 .stMultiSelect [data-baseweb="tag"] span {
-    color: #0f172a !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    line-height: 1 !important;
-    padding-left: 4px !important;
+    line-height: 1.2 !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
+/* Search box */
 .stMultiSelect input {
-    background: #ffffff !important;
-    color: #0f172a !important;
-    -webkit-text-fill-color: #0f172a !important;
-    caret-color: #2563eb !important;
     border: none !important;
     box-shadow: none !important;
     outline: none !important;
+    color: #0f172a !important;
 }
-
 /* NUMBER INPUT BUTTONS */
 .stNumberInput button {
     background: #ffffff !important;
