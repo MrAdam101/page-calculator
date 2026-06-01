@@ -164,53 +164,52 @@ div[data-baseweb="base-input"]:focus-within {
     border-color: #2563eb !important;
     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.20) !important;
 }
-/* TEACHING DAYS LEFT MULTISELECT - FIXED */
+/* TEACHING DAYS LEFT MULTISELECT - FINAL */
 
 .stMultiSelect [data-baseweb="select"] {
     background: #ffffff !important;
-    border: 1px solid #d7dee8 !important;
+    border: 2px solid #2563eb !important;
     border-radius: 16px !important;
-    min-height: 58px !important;
-    padding: 8px 12px !important;
-    box-shadow: none !important;
+    min-height: 68px !important;
+    padding: 12px 14px !important;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.20) !important;
     overflow: visible !important;
 }
 
-.stMultiSelect [data-baseweb="select"]:focus-within {
-    border: 2px solid #2563eb !important;
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.20) !important;
-}
-
-/* Fix inner red line */
 .stMultiSelect [data-baseweb="select"] > div {
     background: #ffffff !important;
     border: none !important;
     box-shadow: none !important;
-    min-height: 42px !important;
+    min-height: 44px !important;
     display: flex !important;
     align-items: center !important;
+    overflow: visible !important;
     padding: 0 !important;
 }
 
-/* Fix Monday word clipping */
 .stMultiSelect [data-baseweb="tag"] {
     background: #ffffff !important;
     color: #0f172a !important;
     border: 1px solid #d7dee8 !important;
     border-radius: 10px !important;
-    min-height: 34px !important;
-    height: auto !important;
-    padding: 6px 12px !important;
-    margin: 3px 6px 3px 0 !important;
+    min-height: 42px !important;
+    height: 42px !important;
+    padding: 0 14px !important;
+    margin: 2px 6px 2px 0 !important;
     display: inline-flex !important;
     align-items: center !important;
-    line-height: 1.2 !important;
+    justify-content: center !important;
+    overflow: visible !important;
+    line-height: normal !important;
     font-weight: 600 !important;
 }
 
 .stMultiSelect [data-baseweb="tag"] span {
     color: #0f172a !important;
-    line-height: 1.2 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    line-height: normal !important;
+    overflow: visible !important;
 }
 
 .stMultiSelect input {
