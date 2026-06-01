@@ -250,6 +250,6 @@ div[data-testid="stHorizontalBlock"] > div {
 /* REMOVE RED BORDER */
 [aria-invalid="true"],
 [data-invalid="true"] {
-    border-color: #111827 !important;
+    border-color: transparent !important;
     box-shadow: none !important;
 }
