@@ -18,7 +18,7 @@
     --shadow-sm: 0 6px 14px rgba(15, 23, 42, 0.04);
 }
 
-html, body, {
+html, body {
     font-family: 'Inter', sans-serif;
 }
 
@@ -474,21 +474,6 @@ div[data-testid="stHorizontalBlock"] > div {
 }
 
 /* ALIGN MULTISELECT BORDER + INNER WHITE AREA */
-.stMultiSelect > div {
-    background: transparent !important;
-    border-radius: 16px !important;
-    padding: 0 !important;
-}
-
-.stMultiSelect [data-baseweb="select"] {
-    background: #ffffff !important;
-    border: 1px solid #0f172a !important;
-    border-radius: 16px !important;
-    min-height: 50px !important;
-    padding: 0 0px !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-}
 
 .stMultiSelect [data-baseweb="select"] > div {
     background: #ffffff !important;
@@ -500,7 +485,6 @@ div[data-testid="stHorizontalBlock"] > div {
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 
 :root {
@@ -1044,4 +1028,47 @@ div[data-baseweb="base-input"]:focus-within {
 .stMultiSelect [data-baseweb="select"]:focus-within {
     border-color: #2563eb !important;
     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.20) !important;
+}
+
+/* FINAL CLEAN MULTISELECT */
+
+.stMultiSelect [data-baseweb="select"] {
+    background: #ffffff !important;
+    border: 1px solid #d7dee8 !important;
+    border-radius: 16px !important;
+    min-height: 58px !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+}
+
+.stMultiSelect [data-baseweb="select"]:focus-within {
+    border: 1px solid #93c5fd !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15) !important;
+}
+
+.stMultiSelect [data-baseweb="select"] > div {
+    background: #ffffff !important;
+    min-height: 56px !important;
+    padding: 6px 10px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.stMultiSelect [data-baseweb="tag"] {
+    background: #ffffff !important;
+    border: 1px solid #d7dee8 !important;
+    border-radius: 12px !important;
+    height: 38px !important;
+    padding: 0 12px !important;
+    margin: 2px 4px 2px 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    color: #0f172a !important;
+    font-weight: 600 !important;
+}
+
+.stMultiSelect input {
+    color: #0f172a !important;
+    caret-color: #2563eb !important;
 }
