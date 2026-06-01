@@ -443,31 +443,3 @@ div[data-testid="stHorizontalBlock"] > div {
         white-space: normal;
     }
 }
-/* FIX MULTISELECT CLICK-OFF BUG + REMOVE RED */
-
-.stMultiSelect [data-baseweb="select"] {
-    background: #ffffff !important;
-    border: 1px solid #d7dee8 !important;
-    border-radius: 16px !important;
-    min-height: 58px !important;
-    padding: 6px 12px !important;
-    box-shadow: none !important;
-    overflow: visible !important;
-}
-
-.stMultiSelect [data-baseweb="select"]:focus-within {
-    border: 2px solid #2563eb !important;
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.20) !important;
-}
-
-/* remove red without breaking layout */
-.stMultiSelect [aria-invalid="true"],
-.stMultiSelect [data-invalid="true"] {
-    border-color: #d7dee8 !important;
-    box-shadow: none !important;
-}
-
-.stMultiSelect [data-baseweb="select"]:focus-within [aria-invalid="true"],
-.stMultiSelect [data-baseweb="select"]:focus-within [data-invalid="true"] {
-    border-color: transparent !important;
-}
