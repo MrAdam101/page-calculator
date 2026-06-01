@@ -445,4 +445,22 @@ div[data-testid="stHorizontalBlock"] > div {
         white-space: normal;
     }
 }
+/* REMOVE INNER RED BORDER FROM MULTISELECT */
 
+.stMultiSelect [data-baseweb="select"] div {
+    border-color: transparent !important;
+}
+
+.stMultiSelect [data-baseweb="select"] * {
+    box-shadow: none !important;
+}
+
+.stMultiSelect [data-baseweb="select"] > div {
+    border: none !important;
+}
+
+/* KEEP ONLY OUTER BLUE BORDER */
+
+.stMultiSelect [data-baseweb="select"] {
+    border: 2px solid #2563eb !important;
+}
