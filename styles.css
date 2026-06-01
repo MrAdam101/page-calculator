@@ -1008,3 +1008,23 @@ textarea:focus,
     color: #0f172a !important;
     caret-color: #2563eb !important;
 }
+
+/* FORCE BLUE FOCUS */
+
+input:focus,
+textarea:focus,
+.stTextInput input:focus,
+.stNumberInput input:focus,
+.stDateInput input:focus,
+div[data-baseweb="input"]:focus-within,
+div[data-baseweb="base-input"]:focus-within {
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.20) !important;
+    outline: none !important;
+}
+
+/* kill Streamlit red validation */
+[aria-invalid="true"] {
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.20) !important;
+}
