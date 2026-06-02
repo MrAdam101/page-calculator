@@ -156,6 +156,18 @@ label {
     box-shadow: none !important;
 }
 
+/* NUMBER INPUT FIX */
+
+.stNumberInput div[data-baseweb="input"][aria-invalid="true"] {
+    border-color: #374151 !important;
+    box-shadow: none !important;
+}
+
+.stNumberInput div[data-baseweb="input"][aria-invalid="true"]:focus-within {
+    border-color: var(--primary) !important;
+    box-shadow: var(--blue-glow) !important;
+}
+
 .stTextInput div[data-baseweb="input"]:focus-within,
 .stNumberInput div[data-baseweb="input"]:focus-within,
 .stDateInput div[data-baseweb="input"]:focus-within {
@@ -488,15 +500,5 @@ div[data-testid="stHorizontalBlock"] > div {
     }
 }
 
-}
-/* remove red border but keep blue focus */
-.stTextInput [aria-invalid="true"]:focus,
-.stNumberInput [aria-invalid="true"]:focus,
-.stDateInput [aria-invalid="true"]:focus,
-.stTextInput [aria-invalid="true"]:focus-within,
-.stNumberInput [aria-invalid="true"]:focus-within,
-.stDateInput [aria-invalid="true"]:focus-within {
-    border-color: var(--primary) !important;
-    box-shadow: var(--blue-glow) !important;
-    outline: none !important;
-}
+
+
