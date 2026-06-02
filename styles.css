@@ -168,9 +168,16 @@ div[data-baseweb="base-input"] {
 [data-invalid="true"],
 input[aria-invalid="true"],
 div[aria-invalid="true"] {
-    border-color: var(--border-strong) !important;
+    border-color: transparent !important;
     box-shadow: none !important;
     outline: none !important;
+}
+
+/* no special focus for invalid fields */
+input[aria-invalid="true"]:focus,
+div[aria-invalid="true"]:focus-within {
+    border-color: transparent !important;
+    box-shadow: none !important;
 }
 
 
