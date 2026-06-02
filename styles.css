@@ -479,3 +479,10 @@ div[data-testid="stHorizontalBlock"] > div {
         white-space: normal;
     }
 }
+/* FORCE REMOVE RED STREAMLIT BORDER */
+
+div[data-baseweb="input"][aria-invalid="true"],
+div[data-baseweb="base-input"][aria-invalid="true"] {
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
