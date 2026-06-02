@@ -193,13 +193,6 @@ div[aria-invalid="true"] {
     outline: none !important;
 }
 
-/* invalid fields should still show blue focus, not red */
-input[aria-invalid="true"]:focus,
-div[aria-invalid="true"]:focus-within {
-    border-color: var(--primary) !important;
-    box-shadow: var(--blue-glow) !important;
-}
-
 
 /* NUMBER INPUT BUTTONS */
 
@@ -501,4 +494,17 @@ div[data-testid="stHorizontalBlock"] > div {
 }
 
 
+/* FINAL NUMBER INPUT RED BORDER FIX */
 
+.stNumberInput [aria-invalid="true"],
+.stNumberInput [data-invalid="true"],
+.stNumberInput div[aria-invalid="true"],
+.stNumberInput div[data-invalid="true"] {
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.stNumberInput div[data-baseweb="input"]:focus-within {
+    border: 2px solid var(--primary) !important;
+    box-shadow: var(--blue-glow) !important;
+}
