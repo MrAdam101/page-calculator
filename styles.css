@@ -607,3 +607,21 @@ div[data-testid="stHorizontalBlock"] > div {
     margin: 0 8px 0 0 !important;
     transform: translateY(0px) !important;
 }
+/* MULTISELECT NORMAL STATE FIX */
+
+.stMultiSelect [data-baseweb="select"]:not(:focus-within) {
+    min-height: 72px !important;
+    padding: 8px 12px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.stMultiSelect [data-baseweb="select"]:not(:focus-within) > div {
+    min-height: 52px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.stMultiSelect [data-baseweb="select"]:not(:focus-within) [data-baseweb="tag"] {
+    transform: translateY(0px) !important;
+}
