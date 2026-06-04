@@ -581,3 +581,24 @@ div[data-testid="stHorizontalBlock"] > div {
     box-shadow: none !important;
     outline: none !important;
 }
+/* FIX MULTISELECT TAG ALIGNMENT ONLY */
+
+.stMultiSelect [data-baseweb="select"] {
+    min-height: 70px !important;
+    padding: 12px 16px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.stMultiSelect [data-baseweb="tag"] {
+    margin: 0 8px 0 0 !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+.stMultiSelect [data-baseweb="tag"] span {
+    display: inline-flex !important;
+    align-items: center !important;
+}
