@@ -595,5 +595,5 @@ div[data-testid="stHorizontalBlock"] > div {
 
 .stMultiSelect [data-baseweb="tag"] {
     margin: 0 8px 0 0 !important;
-    transform: translateY(-2px) !important;
+    transform: translateY(-6px) !important;
 }
