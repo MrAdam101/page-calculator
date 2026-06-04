@@ -76,7 +76,7 @@ book_name = st.text_input("Enter book Name ")
 
 col1, col2 = st.columns(2)
 with col1:
-    current_page = st.number_input("Current Page Completed", min_value=0, value=0, step=1)
+    current_page = st.number_input("Current Page Completed", min_value=0, value=1, step=1)
 with col2:
     last_page = st.number_input("Last Page in Book", min_value=1, value=60, step=1)
 
