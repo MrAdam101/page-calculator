@@ -581,23 +581,26 @@ div[data-testid="stHorizontalBlock"] > div {
     box-shadow: none !important;
     outline: none !important;
 }
-/* FIX MULTISELECT TAG POSITION */
+/* FIX MULTISELECT HEIGHT AND TAG POSITION */
 
 .stMultiSelect [data-baseweb="select"] {
     min-height: 44px !important;
+    height: 44px !important;
     padding: 0 14px !important;
     display: flex !important;
     align-items: center !important;
 }
 
 .stMultiSelect [data-baseweb="select"] > div {
-    min-height: 60px !important;
+    min-height: 44px !important;
+    height: 44px !important;
     display: flex !important;
     align-items: center !important;
 }
 
 .stMultiSelect [data-baseweb="tag"] {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+    height: 36px !important;
+    min-height: 36px !important;
+    margin: 0 8px 0 0 !important;
     transform: translateY(0px) !important;
 }
