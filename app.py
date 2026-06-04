@@ -86,12 +86,28 @@ with col3:
 with col4:
     end_date = st.date_input("Book End Date", value=date.today() + timedelta(days=30))
 
-days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-selected_days = st.multiselect(
-    "Teaching Days Left",
-    options=days_of_week,
-    default=["Monday", "Wednesday", "Friday"],
-)
+st.markdown("### Teaching Days Left")
+
+days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+if "selected_days" not in st.session_state:
+    st.session_state.selected_days = ["Monday", "Wednesday", "Friday"]
+
+day_cols = st.columns(7)
+
+for i, day in enumerate(days_of_week):
+    selected = day in st.session_state.selected_days
+    button_class = "day-button selected-day" if selected else "day-button"
+
+    with day_cols[i]:
+        if st.button(day[:3], key=f"day_{day}"):
+            if selected:
+                st.session_state.selected_days.remove(day)
+            else:
+                st.session_state.selected_days.append(day)
+            st.rerun()
+
+selected_days = st.session_state.selected_days
 
 calculate = st.button("Generate Plan")
 
