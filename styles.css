@@ -522,3 +522,45 @@ div[data-testid="stHorizontalBlock"] > div {
     margin: 0 !important;
 }
 
+/* EMERGENCY STREAMLIT NUMBER INPUT RED BORDER OVERRIDE */
+
+.stNumberInput div[data-baseweb="input"],
+.stNumberInput div[data-baseweb="input"] *,
+.stNumberInput [data-baseweb="base-input"],
+.stNumberInput [data-baseweb="base-input"] * {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Force number input outer box blue on focus */
+.stNumberInput div[data-baseweb="input"]:focus-within {
+    border: 2px solid var(--primary) !important;
+    box-shadow: var(--blue-glow) !important;
+    border-radius: 16px !important;
+}
+
+/* Kill red invalid border even when focused */
+.stNumberInput div[data-baseweb="input"][aria-invalid="true"],
+.stNumberInput div[data-baseweb="input"][data-invalid="true"],
+.stNumberInput [aria-invalid="true"],
+.stNumberInput [data-invalid="true"] {
+    border-color: #374151 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* If invalid + focused, force blue */
+.stNumberInput div[data-baseweb="input"][aria-invalid="true"]:focus-within,
+.stNumberInput div[data-baseweb="input"][data-invalid="true"]:focus-within,
+.stNumberInput:focus-within div[data-baseweb="input"] {
+    border: 2px solid var(--primary) !important;
+    box-shadow: var(--blue-glow) !important;
+    border-radius: 16px !important;
+}
+
+/* Keep the +/- buttons aligned */
+.stNumberInput button {
+    height: 100% !important;
+    background: #ffffff !important;
+    border-radius: 0 !important;
+}
