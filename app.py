@@ -90,13 +90,13 @@ st.markdown("### Teaching Days Left")
 
 days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
-if "selected_days" not in st.session_state:
-    st.session_state.selected_days = ["Monday", "Wednesday", "Friday"]
-
-day_cols = st.columns(7)
-
-for i, day in enumerate(days_of_week):
-    selected = day in st.session_state.selected_days
+selected_days = st.segmented_control(
+    "Teaching Days Left",
+    options=days_of_week,
+    default=["Monday", "Wednesday", "Friday"],
+    selection_mode="multi",
+    label_visibility="collapsed",
+)
     button_class = "day-button selected-day" if selected else "day-button"
 
     with day_cols[i]:
