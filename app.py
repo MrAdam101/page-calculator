@@ -95,20 +95,8 @@ selected_days = st.segmented_control(
     options=days_of_week,
     default=["Monday", "Wednesday", "Friday"],
     selection_mode="multi",
-    label_visibility="collapsed",
+    label_visibility="collapsed"
 )
-    button_class = "day-button selected-day" if selected else "day-button"
-
-    with day_cols[i]:
-        if st.button(day[:3], key=f"day_{day}"):
-            if selected:
-                st.session_state.selected_days.remove(day)
-            else:
-                st.session_state.selected_days.append(day)
-            st.rerun()
-
-selected_days = st.session_state.selected_days
-
 calculate = st.button("Generate Plan")
 
 st.markdown("</div>", unsafe_allow_html=True)
