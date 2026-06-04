@@ -597,3 +597,19 @@ div[data-testid="stHorizontalBlock"] > div {
     margin: 0 8px 0 0 !important;
     transform: translateY(-1px) !important;
 }
+/* DAY SELECTOR BUTTONS */
+
+div[data-testid="column"] .stButton > button {
+    height: 52px !important;
+    border-radius: 16px !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 2px solid #374151 !important;
+    box-shadow: none !important;
+}
+
+div[data-testid="column"] .stButton > button:hover {
+    border: 2px solid var(--primary) !important;
+    box-shadow: var(--blue-glow) !important;
+    color: var(--primary-dark) !important;
+}
