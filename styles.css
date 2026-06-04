@@ -156,26 +156,6 @@ label {
     box-shadow: none !important;
 }
 
-/* NUMBER INPUT FIX */
-
-.stNumberInput div[data-baseweb="input"][aria-invalid="true"] {
-    border-color: #374151 !important;
-    box-shadow: none !important;
-}
-
-.stNumberInput div[data-baseweb="input"][aria-invalid="true"]:focus-within {
-    border-color: var(--primary) !important;
-    box-shadow: var(--blue-glow) !important;
-}
-
-.stTextInput div[data-baseweb="input"]:focus-within,
-.stNumberInput div[data-baseweb="input"]:focus-within,
-.stDateInput div[data-baseweb="input"]:focus-within {
-    border: 2px solid var(--primary) !important;
-    box-shadow: var(--blue-glow) !important;
-
-}
-
 div[data-baseweb="input"],
 div[data-baseweb="base-input"] {
     background: #ffffff !important;
@@ -493,18 +473,52 @@ div[data-testid="stHorizontalBlock"] > div {
     }
 }
 
+/* FINAL INPUT FOCUS FIX - TEXT, NUMBER, DATE */
 
-/* FINAL NUMBER INPUT RED BORDER FIX */
-
-.stNumberInput [aria-invalid="true"],
-.stNumberInput [data-invalid="true"],
-.stNumberInput div[aria-invalid="true"],
-.stNumberInput div[data-invalid="true"] {
-    border-color: transparent !important;
+/* Normal state */
+.stTextInput div[data-baseweb="input"],
+.stNumberInput div[data-baseweb="input"],
+.stDateInput div[data-baseweb="input"] {
+    background: #ffffff !important;
+    border: 2px solid #374151 !important;
+    border-radius: 16px !important;
     box-shadow: none !important;
+    overflow: hidden !important;
 }
 
-.stNumberInput div[data-baseweb="input"]:focus-within {
+/* Focus state - force blue, even if Streamlit marks it invalid */
+.stTextInput div[data-baseweb="input"]:focus-within,
+.stNumberInput div[data-baseweb="input"]:focus-within,
+.stDateInput div[data-baseweb="input"]:focus-within,
+.stTextInput div[data-baseweb="input"][aria-invalid="true"]:focus-within,
+.stNumberInput div[data-baseweb="input"][aria-invalid="true"]:focus-within,
+.stDateInput div[data-baseweb="input"][aria-invalid="true"]:focus-within,
+.stTextInput div[data-baseweb="input"][data-invalid="true"]:focus-within,
+.stNumberInput div[data-baseweb="input"][data-invalid="true"]:focus-within,
+.stDateInput div[data-baseweb="input"][data-invalid="true"]:focus-within {
     border: 2px solid var(--primary) !important;
     box-shadow: var(--blue-glow) !important;
+    outline: none !important;
 }
+
+/* Remove red border from inner invalid elements */
+.stTextInput [aria-invalid="true"],
+.stNumberInput [aria-invalid="true"],
+.stDateInput [aria-invalid="true"],
+.stTextInput [data-invalid="true"],
+.stNumberInput [data-invalid="true"],
+.stDateInput [data-invalid="true"] {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Keep number input buttons aligned */
+.stNumberInput button {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 0 !important;
+    height: 100% !important;
+    margin: 0 !important;
+}
+
