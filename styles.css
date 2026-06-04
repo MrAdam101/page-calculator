@@ -162,17 +162,6 @@ div[data-baseweb="base-input"] {
     border-radius: 16px !important;
 }
 
-/* KILL RED VALIDATION */
-
-[aria-invalid="true"],
-[data-invalid="true"],
-input[aria-invalid="true"],
-div[aria-invalid="true"] {
-    border-color: transparent !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
 
 /* NUMBER INPUT BUTTONS */
 
@@ -563,4 +552,32 @@ div[data-testid="stHorizontalBlock"] > div {
     height: 100% !important;
     background: #ffffff !important;
     border-radius: 0 !important;
+}
+
+/* TRUE FINAL FIX - NUMBER INPUT RED BORDER */
+
+.stNumberInput:focus-within div[data-baseweb="input"] {
+    border-color: var(--primary) !important;
+    border-width: 2px !important;
+    border-style: solid !important;
+    box-shadow: var(--blue-glow) !important;
+    border-radius: 16px !important;
+}
+
+.stNumberInput:focus-within div[data-baseweb="input"] > div {
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.stNumberInput:focus-within input {
+    border-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.stNumberInput input:focus,
+.stNumberInput input:focus-visible {
+    border-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
 }
